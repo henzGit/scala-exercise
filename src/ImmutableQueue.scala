@@ -47,6 +47,9 @@ sealed class CustomQueue[T] private(private val in: List[T], private val out: Li
     case _                  => throw new NoSuchElementException("dequeue on empty queue")
   }
 
+  def lengthInputList: Int = in.length
+  def lengthOutputList: Int = out.length
+
   /** Returns a string representation of this queue.
     */
   override def toString()  = {
