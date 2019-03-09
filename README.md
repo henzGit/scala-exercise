@@ -1,6 +1,9 @@
 # scalaExercise
 This is an exercise in Scala to create an immutable queue. It means every enQueue and deQueue operation returns a new queue
-instance instead of modifying the current instance. The internal mechanism of this queue is based on two different stacks:
+instance instead of modifying the current instance. 
+<br>
+<br>
+The internal mechanism of this queue is based on two different stacks:
 in-stack and out-stack. In-stack is used to manage the enQueue operation while the out-stack is used to manage the deQueue 
 operation. 
 
