@@ -1,5 +1,5 @@
 object ImmutableQueueTest {
-  val NUM_CHARS = 1000
+  val NUM_CHARS = 100000
   val LEN_CHARS = 10
   val randomStrings: List[String] = produceRandomStrings(NUM_CHARS, LEN_CHARS)
 
