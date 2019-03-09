@@ -52,12 +52,8 @@ sealed class CustomQueue[T] private(private val in: List[T], private val out: Li
   override def toString()  = {
     val rev = in.reverse
     out match {
-      case Nil if !in.isEmpty => {
-        in.toString().replace("List","Queue")
-      }
-      case x => {
-        (out ++ in).toString().replace("List","Queue")
-      }
+      case Nil if !in.isEmpty => in.toString().replace("List","Queue")
+      case x => (out ++ in).toString().replace("List","Queue")
       case _ => "empty queue!"
     }
   }
@@ -66,7 +62,6 @@ sealed class CustomQueue[T] private(private val in: List[T], private val out: Li
 object CustomQueue {
   def empty[T]: CustomQueue[T] = EmptyQueue.asInstanceOf[CustomQueue[T]]
   def apply[T](xs: T*): CustomQueue[T] = new CustomQueue[T](Nil, xs.toList)
-
   private object EmptyQueue extends CustomQueue[Nothing](Nil, Nil) { }
 }
 
