@@ -61,7 +61,6 @@ sealed class CustomQueue[T] private(private val in: List[T], private val out: Li
 
 object CustomQueue {
   def empty[T]: CustomQueue[T] = EmptyQueue.asInstanceOf[CustomQueue[T]]
-  def apply[T](xs: T*): CustomQueue[T] = new CustomQueue[T](Nil, xs.toList)
   private object EmptyQueue extends CustomQueue[Nothing](Nil, Nil) { }
 }
 
